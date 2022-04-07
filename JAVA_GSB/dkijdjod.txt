@@ -1,0 +1,23 @@
+    public static void connecterBd() {
+        final String url = "jdbc:mysql://localhost:3306/javagsb";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            ConnexionMySql.cnx = DriverManager.getConnection(url, "root", "");
+            System.out.println("Connexion r\u00e9ussie ! ");
+        }
+        catch (Exception e) {
+            System.out.println("Echec lors de la connexion");
+        }
+    }
+
+    public static void connecterBd() {
+        final String url = "jdbc:mysql://192.176.1.13:3306/javagsb";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            ConnexionMySql.cnx = DriverManager.getConnection(url, "admindb", "password");
+            System.out.println("Connexion réussie ! ");
+        }
+        catch (Exception e) {
+            System.out.println("Echec lors de la connexion");
+        }
+    }
